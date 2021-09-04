@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+    <!-- Bootstrap Css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body class="bg-gray">
+    <main>
+        <section>
+            <h2 class="text-success text-center my-5">Find Your Desired Books</h2>
+            <!-- Search Field  -->
+            <div class="input-group mb-3 mx-auto w-50">
+                <input id="search-field" type="text" class="form-control" placeholder="Search Books"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="searchBooks()" class="btn btn-outline-success" type="button"
+                    id="button-addon2">Search</button>
+            </div>
+            <!-- loading spinner -->
+            <div class="spinner-container d-flex justify-content-center">
+                <div id="spinner" class="spinner-grow text-success" style="display: none" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <!--Search Result Not Found  -->
+            <div id="not-found" style="display: none">
+                <h2 class="text-danger text-center">Search result not found</h2>
+            </div>
+        </section>
+        <!-- Search Count Result  -->
+        <section id="result" class="display-books">
+            <div id="search-count">
+                <div class="total-books">
+
+                </div>
+            </div>
+            <!-- Display Books  -->
+            <div id="display-books" class="row row-cols-1 row-cols-md-6 g-4 mx-2">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Js Bundle  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <!-- Custom Js      -->
+    <script src="js/books-archive.js"></script>
+</body>
+
+</html>
